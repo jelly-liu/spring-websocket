@@ -3,7 +3,8 @@ an complete basic spring web socket example
 
 # based on spring framework
 spring4.3  
-support standard websocket, and rolling pull or long pull that brower not support standard websocket
+support standard websocket, and rolling pull or long pull that brower not support standard websocket  
+i upload an firefox3.5, not support standart websocket, will simulate as rolling pull
 
 # how to run
 import project to intellij idea  

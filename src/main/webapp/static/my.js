@@ -3,7 +3,7 @@ $(function(){
     var intervalIds = [];
 
     $('#newWebsocket').click(function () {
-        var ws = ct();
+        var ws = createWebSocket();
 
         var intervalId = setInterval(function () {
             var time = new Date().getTime();
@@ -13,7 +13,7 @@ $(function(){
         intervalIds.push(intervalId);
     });
 
-    function ct() {
+    function createWebSocket() {
         var websocket = null;
 
         if ('WebSocket' in window) {

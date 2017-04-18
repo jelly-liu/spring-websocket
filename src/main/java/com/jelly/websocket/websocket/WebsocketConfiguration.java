@@ -18,14 +18,14 @@ public class WebsocketConfiguration implements WebSocketConfigurer {
         webSocketHandlerRegistry
                 .addHandler(helloWebsocketEndPoint(), "/websck")
                 .addInterceptors(new WebsocketHandshakeInterceptor())
-                .setAllowedOrigins("localhost");
+                .setAllowedOrigins("http://", "https://", "*");
 
         //for the brower that not support standart websocket protocol
         //may be rolling pull or long pull
         webSocketHandlerRegistry
                 .addHandler(helloWebsocketEndPoint(), "/sockjs/websck")
                 .addInterceptors(new WebsocketHandshakeInterceptor())
-                .setAllowedOrigins("localhost").withSockJS();
+                .setAllowedOrigins("http://", "https://", "*").withSockJS();
     }
 
     @Bean
